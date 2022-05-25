@@ -33,7 +33,7 @@ const Home = (props) => {
                 <Image 
                     source={image.url} 
                     style={{
-                        height: deviceHeight / 3 - 12, 
+                        height: deviceHeight /3.5- 12, 
                         width: deviceWidth/ 2.2 - 6, 
                         borderRadius: 20, 
                         margin: 9, }}
