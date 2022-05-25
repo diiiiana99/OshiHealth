@@ -1,25 +1,25 @@
-
-
-import React from 'react';
-import {SafeAreaView, Text, StyleSheet, View, Button } from 'react-native'
-
-
-
-
-const App: () => Node = () => {
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from './src/Home'
+import showImage from './src/showImage'
 
 
 
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <SafeAreaView style={{flex:1}}>
-    <View style={{height: 100, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{fontSize: 16, textAlign: 'center'}}>Selfies</Text>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" options={{title:''}}component={Home}  />
+        <Stack.Screen name="showImage" options={{title:''}} component={showImage}  />
+      </Stack.Navigator>
     
-    </View>
-    </SafeAreaView>
+    </NavigationContainer>
+  
   );
-};
-
-
+}
 
 export default App;
