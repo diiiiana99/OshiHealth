@@ -11,7 +11,10 @@ const Home = (props) => {
   return (
     <ScrollView>
         <View>
-            <Text style={{textAlign:'center' , fontSize: 18, marginTop: 10}}>
+            <Text style={{
+                textAlign:'center' , 
+                fontSize: 18, 
+                marginTop: 10}}>
                Selfies
             </Text>
         </View>
