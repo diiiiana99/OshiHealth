@@ -11,20 +11,14 @@ const showImage = (props) =>{
   return (
     <ScrollView>
         <View>
-            <Text style={{
-                textAlign:'center' , 
-                fontSize: 18, 
-                marginTop: 15}}>
-               Selfies
-            </Text>
         </View>
         <View style={{alignItems: 'center'}}>
             <Image 
                 source={props.route.params.url} 
                 style={{ 
-                    marginTop: 18, 
+                    marginTop: 28, 
                     height: deviceHeight/2.6, 
-                    width: deviceHeight/2.3, 
+                    width: deviceWidth/1.2, 
                     borderRadius: 20, 
                     margin: 2}}
             />
