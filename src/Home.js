@@ -1,8 +1,7 @@
 import * as  React from 'react'
-import {View, Text, TouchableOpacity, Image, Dimensions, ScrollView} from 'react-native'
-import {MaterialCommunityIcons} from 'react-native-vector-icons'
+import {View, Text, TouchableOpacity, Image, Dimensions, ScrollView, FlatList,Animated } from 'react-native'
+import Header  from './Header';
 import Images from './Images'
-
 let deviceHeight = Dimensions.get('window').height;
 let deviceWidth = Dimensions.get('window').width;
 
@@ -10,22 +9,14 @@ let deviceWidth = Dimensions.get('window').width;
 
 const Home = (props) => {
   return (
-    <ScrollView>
-        <View>
-            {/* <Text style={{
-                textAlign:'center' , 
-                fontSize: 18, 
-                marginTop: 10}}>
-               Selfies
-            </Text> */}
-        </View>
-     
+    <ScrollView style={{backgroundColor: 'white'}}>
         <View style={{ 
             display: 'flex', 
             flexDirection: 'row', 
             flexWrap: 'wrap', 
             justifyContent: 'center', 
-            marginTop: 15 }} >
+            marginTop: 100,
+            backgroundColor: 'white' }} >
         {    
             Images.map((image, index) => (
                <TouchableOpacity 
