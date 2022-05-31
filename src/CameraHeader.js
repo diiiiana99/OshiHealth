@@ -5,16 +5,13 @@ import Feather from 'react-native-vector-icons/Feather';
 
 Feather.loadFont();
 
-const CustomHeader = props => {
+const CameraHeader = props => {
   return (
     <Surface style={styles.header}>
       <View style={styles.view}>
-        <Title style={{color: '#757575', fontWeight: '300'}}>Selfies</Title>
-      </View>
-      <View style={styles.rightView}>
         {
-          <TouchableOpacity onPress={() => props.navigation.navigate('Selfie')}>
-            <Feather name="camera" color="#757575" size={24}></Feather>
+          <TouchableOpacity onPress={() => props.navigation.navigate('Home')}>
+            <Feather name="arrow-left" color="white" size={29}></Feather>
           </TouchableOpacity>
         }
       </View>
@@ -22,7 +19,7 @@ const CustomHeader = props => {
   );
 };
 
-export default CustomHeader;
+export default CameraHeader;
 
 const styles = StyleSheet.create({
   header: {
@@ -30,20 +27,17 @@ const styles = StyleSheet.create({
     elevation: 1,
     marginTop: 38,
     fontFamily: 'Inter',
-    justifyContent: 'space-between',
+    justifyContent: '',
     flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'black',
   },
   view: {
     flex: 1,
-    marginLeft: 45,
+    marginLeft: 15,
     flexDirection: 'row',
-    justifyContent: 'center',
   },
   rightView: {
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
     marginRight: 15,
-    fontWeight: 200,
   },
 });

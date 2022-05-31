@@ -1,72 +1,115 @@
-import * as  React from 'react'
-import {View, Text, TouchableOpacity, Image, Dimensions, ScrollView, FlatList,Animated, StyleSheet } from 'react-native'
-import ImageOverlay from "react-native-image-overlay";
+import * as React from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  Dimensions,
+  ScrollView,
+} from 'react-native';
+import ImageOverlay from 'react-native-image-overlay';
 
-
-import Header  from './Header';
-import Images from './Images'
+import Header from './Header';
+import Images from './Images';
 let deviceHeight = Dimensions.get('window').height;
 let deviceWidth = Dimensions.get('window').width;
 
+const data = [
+  {
+    time: '10:30pm',
+    date: '5/23/2022',
+    url: require('../assets/Selfies.jpg'),
+  },
+  {
+    time: '9:45pm',
+    date: '5/23/2022',
+    url: require('../assets/Selfies.jpg'),
+  },
+  {
+    time: '7:30pm',
+    date: '5/23/2022',
+    url: require('../assets/Selfies.jpg'),
+  },
+  {
+    time: '6:00pm',
+    date: '5/23/2022',
+    url: require('../assets/Selfies.jpg'),
+  },
+  {
+    time: '4:32pm',
+    date: '5/23/2022',
+    url: require('../assets/Selfies.jpg'),
+  },
+  {
+    time: '3:38pm',
+    date: '5/23/2022',
+    url: require('../assets/Selfies.jpg'),
+  },
+];
 
-
-
-const Home = (props) => {
+const Home = props => {
+  const mappedDate = data.map((date, index) => {
+    return (
+      <View>
+        <TouchableOpacity
+          key={index}
+          onPress={() =>
+            props.navigation.navigate('showImage', {date: date})
+          }>
+          <Image
+            source={date.url}
+            overlayColor="orange"
+            overlayAlpha={0.4}
+            rounded={25}
+            style={{
+              opacity: 1,
+              bgColor: '#D09040',
+              height: deviceHeight / 3.5 - 12,
+              width: deviceWidth / 2.2 - 6,
+              borderRadius: 20,
+              margin: 9,
+            }}
+          />
+          <Text
+            style={{
+              position: 'relative',
+              textAlign: 'center',
+              color: 'white',
+              bottom: 150,
+              fontSize: 13,
+            }}>
+            {date.date}
+          </Text>
+          <Text
+            style={{
+              position: 'relative',
+              textAlign: 'center',
+              color: 'white',
+              bottom: 150,
+              fontSize: 13,
+            }}>
+            {date.time}
+          </Text>
+        </TouchableOpacity>
+      </View>
+    );
+  });
   return (
-    <ScrollView style={{backgroundColor:'white'}} >
-        
-        <View style={{ 
-            display: 'flex', 
-            flexDirection: 'row', 
-            flexWrap: 'wrap', 
-            justifyContent: 'center',
-            marginTop: 35,
-            backgroundColor: 'white' }} >
-        {    
-            Images.map((image, index) => (
-               <TouchableOpacity 
-                    key={index}    
-                    onPress={() => props.navigation.navigate('showImage' , {url: image.url})}>
-                <Image style={{ }}
-                    source={image.url}
-                    overlayColor="orange"
-                    overlayAlpha={0.4} 
-                    contentPosition="bottom"
-                    rounded={25}
-                    containerStyle=''
-                    
-                    style={{
-                        opacity: 1 ,
-                        bgColor: "#D09040",
-                        height: deviceHeight /3.5- 12, 
-                        width: deviceWidth/ 2.2 - 6, 
-                        borderRadius: 20, 
-                        margin: 9, }}
-                />
-                    <Text style={{
-                        position: 'relative', textAlign: 'center',
-                        color: 'white',
-                         bottom: 150,
-                        fontSize: 13}}>
-                        4/20/21
-                    </Text>
-                    <Text style={{
-                        position: 'relative', textAlign: 'center', bottom: 148,
-                        color: 'white',
-                        fontSize: 12}}>
-                        4:30pm
-                    </Text>
-
-                  
-                 
-
-               </TouchableOpacity>
-                ))
-        }    
-         </View>
+    <ScrollView style={{backgroundColor: 'white'}}>
+      <View
+        style={{
+          display: 'flex',
+          position: 'absolute',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          marginTop: 35,
+          backgroundColor: 'white',
+        }}>
+        {mappedDate}
+      </View>
     </ScrollView>
- 
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

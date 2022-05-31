@@ -20,6 +20,14 @@ target 'testApp' do
   )
 
 
+  # pod 'react-native-camera', path: '../node_modules/react-native-camera', subspecs: [
+  #   'TextDetector',
+  #   'FaceDetectorMLKit',
+  #   'BarcodeDetectorMLKit'
+  # ]
+
+  # pod 'ReactNativeCameraKit', :path => '../node_modules/react-native-camera-kit'
+
   target 'testAppTests' do
     inherit! :complete
     # Pods for testing

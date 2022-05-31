@@ -1,30 +1,39 @@
-import React from 'react'
-import {View, Text, TouchableOpacity, Image, Dimensions, ScrollView} from 'react-native'
-import Images from './Images'
+import React from 'react';
+import {StyleSheet, View, Alert, TouchableOpacity} from 'react-native';
+import { RNCamera } from 'react-native-camera';
+import {useCamera} from 'react-native-camera-hooks';
+import Feather from 'react-native-vector-icons/Feather';
 
-let deviceHeight = Dimensions.get('window').height;
-let deviceWidth = Dimensions.get('window').width;
+Feather.loadFont();
 
+const Selfie = props => {
+  const [{cameraRef}, {takePicture}] = useCamera(null);
 
-
-const showImage = (props) =>{
   return (
-    <ScrollView>
-        <View>
-        </View>
-        <View style={{alignItems: 'center'}}>
-            <Image 
-                source={props.route.params.url} 
-                style={{ 
-                    marginTop: 28, 
-                    height: deviceHeight/2.6, 
-                    width: deviceWidth/1.2, 
-                    borderRadius: 20, 
-                    margin: 2}}
-            />
-        </View>
-   </ScrollView>
-  )
-}
+    <View style={styles.container}>
+      <RNCamera />
+      {
+        <TouchableOpacity
+          style={{marginTop: 350, alignItems: 'center'}}
+          onPress={() => props.navigation.navigate('')}>
+          <Feather color="white" name="circle" size={60}></Feather>
+        </TouchableOpacity>
+      }
+    </View>
+  );
+};
 
-export default showImage
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: 'black',
+  },
+  preview: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export default Selfie;
