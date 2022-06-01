@@ -50,7 +50,7 @@ If you don't already have one, sign up for an Apple developer account.
 
 In the Xcode Project Navigator, choose the project, then your primary target (it should share the same name as your project). Look for the "General" tab on the left-hand side of the screen. Make sure your Apple developer account or team is chosen in the Team selection under "Signing." Carry out the same procedure for the test's goal (it ends with Tests, and is below your main target).
 
-https://reactnative.dev/assets/images/RunningOnDeviceCodeSigning-daffe4c45a59c3f5031b35f6b24def1d.png
+# <img src='https://reactnative.dev/assets/images/RunningOnDeviceCodeSigning-daffe4c45a59c3f5031b35f6b24def1d.png' width='500'>
 
 3. Create and launch your app
 If everything is set up successfully, your device will appear in the Xcode toolbar as a build target, as well as in the Devices pane (2). You may now pick Run from the Product menu or hit the Build and run button (R). Your app will be available on your device in a few moments.
