@@ -1,6 +1,8 @@
-Setting up your enviroment
+<p font-weight='bold'>Setting up your enviroment</p>
+
 
 Node, Watchman, the React Native command line interface, Xcode, and CocoaPods are all required.
+
 
 While you may develop your app with whichever editor you choose, you'll need to install Xcode to get the required tooling to build a React Native app for iOS.
 
