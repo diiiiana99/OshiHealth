@@ -8,9 +8,6 @@ import {
   ScrollView,
 } from 'react-native';
 import ImageOverlay from 'react-native-image-overlay';
-
-import Header from './Header';
-import Images from './Images';
 let deviceHeight = Dimensions.get('window').height;
 let deviceWidth = Dimensions.get('window').width;
 
@@ -50,20 +47,17 @@ const data = [
 const Home = props => {
   const mappedDate = data.map((date, index) => {
     return (
-      <View>
+      <View style={{}}>
         <TouchableOpacity
           key={index}
-          onPress={() =>
-            props.navigation.navigate('showImage', {date: date})
-          }>
+          onPress={() => props.navigation.navigate('showImage', {date: date})}>
           <Image
             source={date.url}
             overlayColor="orange"
             overlayAlpha={0.4}
             rounded={25}
             style={{
-              opacity: 1,
-              bgColor: '#D09040',
+              opacity: 0.7,
               height: deviceHeight / 3.5 - 12,
               width: deviceWidth / 2.2 - 6,
               borderRadius: 20,

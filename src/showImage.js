@@ -8,7 +8,6 @@ import {
   Dimensions,
   ScrollView,
 } from 'react-native';
-import Images from './Images';
 
 let deviceHeight = Dimensions.get('window').height;
 let deviceWidth = Dimensions.get('window').width;
@@ -47,7 +46,6 @@ const showImage = (props, data) => {
               fontWeight: '500',
             }}>
             {props.route.params.date.date}
-
           </Text>
           <Text
             style={{
@@ -56,7 +54,7 @@ const showImage = (props, data) => {
               letterSpacing: 1,
               fontWeight: '500',
             }}>
-           {props.route.params.date.time}
+            {props.route.params.date.time}
           </Text>
         </View>
       </View>

@@ -1,14 +1,11 @@
 import * as React from 'react';
-import {Platform, Button, StyleSheet, Text, View} from 'react-native';
 import {StatusBar} from 'react-native';
-
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './src/Home';
 import Selfie from './src/Camera';
 
 import Header from './src/CustomHeader';
-import CameraHeader from './src/CameraHeader';
 
 import showImage from './src/showImage';
 
