@@ -24,8 +24,7 @@ To install a simulator, open Xcode > Preferences... and select the Components ta
 
 
 
-*
-CocoaPods is written in Ruby and may be installed using the standard Ruby on macOS. You can use a Ruby Version Manager, but until you're sure what you're doing, we recommend sticking with the regular Ruby on macOS.When installing gems with the usual Ruby installation, you'll need to use sudo. (However, this is only a problem for the time of the gem installation.)
+* CocoaPods is written in Ruby and may be installed using the standard Ruby on macOS. You can use a Ruby Version Manager, but until you're sure what you're doing, we recommend sticking with the regular Ruby on macOS.When installing gems with the usual Ruby installation, you'll need to use sudo. (However, this is only a problem for the time of the gem installation.)
 
 ```
 sudo gem install cocoapods
