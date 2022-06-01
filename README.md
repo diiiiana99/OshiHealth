@@ -33,7 +33,7 @@ sudo gem install cocoapods
 
 * Once you have set up your enviroment and installed dependencies. Follow the next steps:
 
-Step 1: Once you fork and clone into your enviroment. Open up your code and press play button too build the project and run the stimulator. To start Metro, run npx react-native start inside your React Native project folder:
+Step 1: Once you fork and clone into your enviroment. Open up your Xcode and press play button too build the project and run the stimulator. To start Metro, run npx react-native start inside your React Native project folder:
 
 ```
 npx react-native start
