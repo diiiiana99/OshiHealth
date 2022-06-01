@@ -1,4 +1,4 @@
-*Setting up your enviroment
+* Setting up your enviroment
 
 
 Node, Watchman, the React Native command line interface, Xcode, and CocoaPods are all required.
@@ -13,22 +13,22 @@ brew install watchman
 Watchman is a Facebook tool that monitors filesystem modifications. It is strongly advised that you install it for improved performance.
 
 
-*Xcode
+* Xcode
 The Mac App Store is the most convenient method to get Xcode. When you install Xcode, you'll also get the iOS Simulator and all of the tools you'll need to create an iOS app.
 
 
-*Installing an iOS Simulator in Xcode
+* Installing an iOS Simulator in Xcode
 To install a simulator, open Xcode > Preferences... and select the Components tab. Select a simulator with the corresponding version of iOS you wish to use.
 
 
 
-*CocoaPods
+* CocoaPods
 CocoaPods is written in Ruby and may be installed using the standard Ruby on macOS. You can use a Ruby Version Manager, but until you're sure what you're doing, we recommend sticking with the regular Ruby on macOS.When installing gems with the usual Ruby installation, you'll need to use sudo. (However, this is only a problem for the time of the gem installation.)
 
 
 sudo gem install cocoapods
 
-*Once you have set up your enviroment and installed dependencies. Follow the next steps:
+* Once you have set up your enviroment and installed dependencies. Follow the next steps:
 
 Step 1: Once you fork and clone into your enviroment. Open up your code and press play button too build the project and run the stimulator. To start Metro, run npx react-native start inside your React Native project folder:
 
@@ -45,7 +45,7 @@ npx react-native run-ios
 
 Step 3: You may need to run the app on your device to experience all the features. In order to do so you need to: 
 
-*Connect your gadget to your computer via USB.
+* Connect your gadget to your computer via USB.
 Using a USB to Lightning connector, connect your iOS device to your Mac. Navigate to your project's ios folder, then open the.xcodeproj file (or.xcworkspace if you're using CocoaPods) within it using Xcode.
 
 
@@ -58,5 +58,5 @@ If you don't already have one, sign up for an Apple developer account.
 In the Xcode Project Navigator, choose the project, then your primary target (it should share the same name as your project). Look for the "General" tab on the left-hand side of the screen. Make sure your Apple developer account or team is chosen in the Team selection under "Signing." Carry out the same procedure for the test's goal (it ends with Tests, and is below your main target).
 
 
-*Create and launch your app
+* Create and launch your app
 If everything is set up successfully, your device will appear in the Xcode toolbar as a build target, as well as in the Devices pane (2). You may now pick Run from the Product menu or hit the Build and run button (R). Your app will be available on your device in a few moments.
