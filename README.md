@@ -6,8 +6,10 @@ Node, Watchman, the React Native command line interface, Xcode, and CocoaPods ar
 
 While you may develop your app with whichever editor you choose, you'll need to install Xcode to get the required tooling to build a React Native app for iOS.Run the following commands in a Terminal after installing Homebrew:
 
+```
 brew install node
 brew install watchman
+```
 
 
 Watchman is a Facebook tool that monitors filesystem modifications. It is strongly advised that you install it for improved performance.
@@ -25,22 +27,26 @@ To install a simulator, open Xcode > Preferences... and select the Components ta
 * CocoaPods
 CocoaPods is written in Ruby and may be installed using the standard Ruby on macOS. You can use a Ruby Version Manager, but until you're sure what you're doing, we recommend sticking with the regular Ruby on macOS.When installing gems with the usual Ruby installation, you'll need to use sudo. (However, this is only a problem for the time of the gem installation.)
 
-
+```
 sudo gem install cocoapods
+```
+
 
 * Once you have set up your enviroment and installed dependencies. Follow the next steps:
 
 Step 1: Once you fork and clone into your enviroment. Open up your code and press play button too build the project and run the stimulator. To start Metro, run npx react-native start inside your React Native project folder:
 
-
+```
 npx react-native start
+```
 
 
 Step 2: Start your application
 Let Metro Bundler run in its own terminal. Open a new terminal inside your React Native project folder. Run the following:
 
-
+```
 npx react-native run-ios
+```
 
 
 Step 3: You may need to run the app on your device to experience all the features. In order to do so you need to: 
